@@ -1,23 +1,24 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
-
+import Menu from './Menu';
+import Movies from './Movies';
+import Options from './Options';
 function App() {
-  return (
+  const [movies, setMovies] = useState([null])
+  return ( // JSX nos permite escribir html dentro de js
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Menu />
       </header>
+      <section className="App-section">
+        <Options onSetMovies={
+          setMovies
+        } />
+      </section>
+      <main className="App-main">
+        <Movies
+          titles={movies} />
+      </main>
     </div>
   );
 }
