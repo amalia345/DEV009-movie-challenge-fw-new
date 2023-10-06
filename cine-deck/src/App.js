@@ -4,7 +4,9 @@ import Menu from './Menu';
 import Movies from './Movies';
 import Options from './Options';
 function App() {
-  const [movies, setMovies] = useState([null])
+  const [movies, setMovies] = useState([])
+  const [currentPage, setCurrentPage] = useState(1)
+
   return ( // JSX nos permite escribir html dentro de js
     <div className="App">
       <header className="App-header">
@@ -16,8 +18,7 @@ function App() {
         } />
       </section>
       <main className="App-main">
-        <Movies
-          titles={movies} />
+      <Movies titles={movies} currentPage={currentPage} setCurrentPage={setCurrentPage}/>
       </main>
     </div>
   );

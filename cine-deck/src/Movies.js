@@ -1,14 +1,33 @@
 import Cards from "./Cards"
-function Movies(props) {
+import './Movies.css'
+function Movies({ titles, currentPage, setCurrentPage }) {
+    console.log(titles);
+    const moviesPerPage = 6;
+    const totalPages = Math.ceil(titles.length / moviesPerPage)
 
-    return (// JSX nos permite escribir html dentro de js
-        <div>
+    const diplayedMovies = titles.slice((currentPage - 1) * moviesPerPage, currentPage * moviesPerPage)
+
+    return (
+        <section>
             <h1>Peliculas:</h1>
-            <Cards />
-            <Cards titleMovie={props.titles[0]} dateMovie='2000' stars={4} />
-            <Cards titleMovie={props.titles[1]} dateMovie='1960' stars={5} />
-        </div>
-    )
+            <div className="Movies-cards">
+                {diplayedMovies.map((movie, index) => (
+                    <Cards key={index} titleMovie={movie.title} dateMovie={movie.date} />
+                ))}
+            </div>
+            <div className="pagination">
+                {[...Array(totalPages)].map((_, index) => (
+                    <button
+                        key={index}
+                        onClick={() => setCurrentPage(index + 1)}
+                        className={currentPage===index+1 ? 'active': ''}
+                    >
+                        {index+1}
+                    </button>
+                ))}
+            </div>
+        </section>
+    );
 }
 
-export default Movies
+export default Movies;
