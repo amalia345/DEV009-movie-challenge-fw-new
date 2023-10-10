@@ -1,23 +1,83 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import './Options.css'
 
 function Options({ onSetMovies }) {
-    const [id, setId] = useState('');
-    const API_KEY = '96706b0f33b454df6da0561912cd7362'
+    const [movieName, setMovieName] = useState('');
+    const [releaseYear, setReleaseYear] = useState('');
+    const [selectedGenre, setSelectedGenre] = useState('');
 
-    function findMovie() {
-        fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}`)
+    const API_KEY = '96706b0f33b454df6da0561912cd7362'
+    const predefinedGenres = [
+        { id: 878, name: 'Science Fiction' },
+        { id: 10752, name: 'War' },
+        { id: 27, name: 'Horror' },
+        { id: 99, name: 'Documentary' },
+        { id: 14, name: 'Fantasy' },
+        { id: 10749, name: 'Romance' }
+    ];
+
+
+    function discoverMoviesByGenre() {
+        fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&with_genres=${selectedGenre}`)
             .then(response => {
                 if (!response.ok) {
-                    throw new Error('Error al obtener la película');
+                    throw new Error('Error al descubrir películas por genero');
                 }
                 return response.json();
             })
             .then(data => {
-                const movieData = {
-                    title: data.title,
-                    date: data.release_date
-                };
-                onSetMovies([movieData]);
+                const movies = data.results.map(movie => ({
+                    title: movie.title,
+                    date: movie.release_date,
+                    poster: movie.poster_path,
+                    stars: movie.vote_average
+                }));
+                onSetMovies(movies);
+            })
+            .catch(error => {
+                console.error("Hubo un error al descubrir películas por genero:", error);
+                onSetMovies([]);
+            });
+    }
+    function discoverMoviesByYear() {
+        fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&primary_release_year=${releaseYear}&sort_by=vote_count.desc`)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Error al descubrir películas por año de lanzamiento');
+                }
+                return response.json();
+            })
+            .then(data => {
+                const movies = data.results.map(movie => ({
+                    title: movie.title,
+                    date: movie.release_date,
+                    poster: movie.poster_path,
+                    stars: movie.vote_average
+                }));
+                onSetMovies(movies);
+            })
+            .catch(error => {
+                console.error("Hubo un error al descubrir películas por año:", error);
+                onSetMovies([]);
+            });
+    }
+
+    function findMovieByName() {
+        fetch(`https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=${encodeURIComponent(movieName)}`)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Error no existen epliculas con ese nombre');
+                }
+                return response.json();
+            })
+            .then(data => {
+                const movies = data.results.map(movie => ({
+                    title: movie.title,
+                    date: movie.release_date,
+                    poster: movie.poster_path,
+                    stars: movie.vote_average
+                }));
+                onSetMovies(movies);
             })
             .catch(error => {
                 console.error("Hubo un error al buscar la película:", error);
@@ -26,7 +86,7 @@ function Options({ onSetMovies }) {
     }
 
 
-    // REGRSEA LAS PELICULAS MAS POPULARES DEL API
+    // ------------ ------ REGRSEA LAS PELICULAS MAS POPULARES DEL API
 
     function fetchPopularMovies() {
         fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=1`)
@@ -37,7 +97,9 @@ function Options({ onSetMovies }) {
             .then(data => {
                 const movies = data.results.map(movie => ({
                     title: movie.title,
-                    date: movie.release_date
+                    date: movie.release_date,
+                    poster: movie.poster_path,
+                    stars: movie.vote_average
                 }));
                 onSetMovies(movies);
             })
@@ -46,19 +108,53 @@ function Options({ onSetMovies }) {
                 onSetMovies([]);
             });
     }
+useEffect(()=>{
+    discoverMoviesByGenre();
+}, [selectedGenre])
+
+    // ------------ RETURN -------------
     return (
-        <div>
-            <button onClick={fetchPopularMovies}>Traer 10 películas populares</button>
+        <article>
+            <div>
+                
+            <input
+                id="byName"
+                type='text'
+                placeholder="Write the name of the movie"
+                value={movieName}
+                onChange={e => setMovieName(e.target.value)}
+            />
+            <button  onClick={findMovieByName}>SEARCH</button>
+            </div>
+            <div>
             <input
                 type='text'
-                placeholder="Ingresa el ID de la película"
-                value={id}
-                onChange={e => setId(e.target.value)}
+                placeholder="write the year"
+                value={releaseYear}
+                onChange={e => setReleaseYear(e.target.value)}
             />
-            <button onClick={findMovie}>Buscar por id</button>
-        </div>
+            <button onClick={discoverMoviesByYear}>BRING</button>
+            </div>
+            <div>
+            <select
+                value={selectedGenre}
+                onChange={e => setSelectedGenre(e.target.value)}
+            >
+                <option value="">Genres</option>
+                {predefinedGenres.map(genre => (
+                    <option key={genre.id} value={genre.id}>
+                        {genre.name}
+                    </option>
+                ))}
+            </select>
+            
+            </div>
+            <div>
+                <p></p>
+            <button  onClick={fetchPopularMovies}>POPULAR</button>
+            </div>
+        </article>
     );
 }
 
 export default Options;
-
