@@ -17,7 +17,7 @@ function Options({ onSetMovies }) {
     ];
 
 
-    function discoverMoviesByGenre() {
+    function discoverMoviesByGenre() { //Código asincrono
         fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&with_genres=${selectedGenre}`)
             .then(response => {
                 if (!response.ok) {

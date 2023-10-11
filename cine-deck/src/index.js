@@ -10,3 +10,4 @@ root.render(
   </React.StrictMode>
 );
 
+//Aqui se renderiza o representación gráfica la app y todos los componentes
