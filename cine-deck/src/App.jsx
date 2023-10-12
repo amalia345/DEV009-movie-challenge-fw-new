@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, React } from 'react';
 import './App.css';
 import Menu from './Menu';
 import Movies from './Movies';
