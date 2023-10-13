@@ -1,5 +1,9 @@
+import React, { useEffect, useState } from 'react';
+import './Options.css'
 
-function Menu(params) {
+//const [movieName, setMovieName] = useState('');
+
+function Menu() {
     return(
         <h1>Cine Deck</h1>
     )
