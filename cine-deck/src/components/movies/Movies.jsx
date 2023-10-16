@@ -1,7 +1,8 @@
 import Cards from "../cards/Cards"
 import './Movies.css'
 function Movies({ titles, currentPage, setCurrentPage }) {
-
+    console.log('AQU IES LA INFO DE TITLE S----------------------------');
+    console.log(titles);
     const moviesPerPage = 5;
     const totalPages = Math.ceil(titles.length / moviesPerPage)
     const selectedTitles = titles.slice((currentPage - 1) * moviesPerPage, currentPage * moviesPerPage)
