@@ -6,15 +6,15 @@ function Cards(props) {//Props no se puede modificar
 
     let estrellas = '⭐'.repeat(Math.ceil(props.starMovie / 2))
 
-    return (
+    return (//jsx
         <div className='Cards-card'>
             <div className='titles'>
                 <h3 >
-                    {props.titleMovie}
+                    {props.nameMovie}
                 </h3>
-                <h5>
+                <p>
                     {props.dateMovie.split('-')[0]} {estrellas}
-                </h5>
+                </p>
             </div>
             <img src={`${baseURL}${props.posterMovie} `}>
             </img>

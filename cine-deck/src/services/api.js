@@ -1,5 +1,3 @@
-import { useEffect, useState } from 'react';
-//import './Options.css'
 const API_KEY = '96706b0f33b454df6da0561912cd7362'
 
 export function discoverMoviesByGenre(genre) { //Código asincrono

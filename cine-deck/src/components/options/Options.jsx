@@ -1,13 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import './Options.css'
-import { fetchPopularMovies, findMovieByName, discoverMoviesByYear, discoverMoviesByGenre } from './services/api.js'
+import { fetchPopularMovies, discoverMoviesByYear, discoverMoviesByGenre } from '../../services/api.js'
 
 function Options({ onSetMovies }) {
-    const [movieName, setMovieName] = useState('');
+    // ---------------------- Constantes  -----------------------
     const [releaseYear, setReleaseYear] = useState('');
     const [selectedGenre, setSelectedGenre] = useState('');
-
-    const API_KEY = '96706b0f33b454df6da0561912cd7362'
     const predefinedGenres = [
         { id: 878, name: 'Science Fiction' },
         { id: 10752, name: 'War' },
@@ -16,7 +14,7 @@ function Options({ onSetMovies }) {
         { id: 14, name: 'Fantasy' },
         { id: 10749, name: 'Romance' }
     ];
-
+    // ---------------------- Funciones que manejan el API  -----------------------
     function handleMoviesByGenre() {
         discoverMoviesByGenre(selectedGenre)
             .then(movies => {
@@ -26,8 +24,6 @@ function Options({ onSetMovies }) {
                 console.error("Error en findMovieByGenre:", error);
             });
     }
-
-
     function handleMoviesByYear() {
         discoverMoviesByYear(releaseYear)
             .then(movies => {
@@ -37,18 +33,6 @@ function Options({ onSetMovies }) {
                 console.error("Error en findMovieByYear:", error);
             });
     }
-
-    function handleMovieByName() {
-        findMovieByName(movieName)
-            .then(movies => {
-                onSetMovies(movies);
-            })
-            .catch(error => {
-                console.error("Error en findMovieByName:", error);
-            });
-    }
-
-
     function handlePopularMovies() {
         fetchPopularMovies()
             .then(movies => {
@@ -58,25 +42,14 @@ function Options({ onSetMovies }) {
                 console.error("Error en fetchPopularMovies:", error);
             });
     }
-
+    // ---------------------- Effects que maneja el cmabio de los select  -----------------------
     useEffect(() => {
         handleMoviesByGenre();
     }, [selectedGenre])
 
-    // ------------ RETURN -------------
+    // ---------------------- RETURN -----------------------
     return (
-        <article>
-            <div>
-
-                <input
-                    id="byName"
-                    type='text'
-                    placeholder="Write the name of the movie"
-                    value={movieName}
-                    onChange={e => setMovieName(e.target.value)}
-                />
-                <button onClick={handleMovieByName}>SEARCH</button>
-            </div>
+        <article className='seccionBusqueda'>
             <div>
                 <input
                     type='text'
@@ -98,14 +71,11 @@ function Options({ onSetMovies }) {
                         </option>
                     ))}
                 </select>
-
             </div>
             <div>
-                <p></p>
                 <button onClick={handlePopularMovies}>POPULAR</button>
             </div>
         </article>
     );
 }
-
 export default Options;
