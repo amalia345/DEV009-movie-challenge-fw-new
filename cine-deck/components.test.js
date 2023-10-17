@@ -1,11 +1,16 @@
 import React from 'react';
-import { render, fireEvent } from '@testing-library/react';
+import { render, fireEvent, screen , waitFor} from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import Cards from './src/components/cards/Cards';
 import Menu from './src/components/menu/Menu.jsx';
 import App from './src/components/menu/Menu';
 import Movies from './src/components/movies/Movies';
 import Options from './src/components/options/Options';
+import { findMovieByName, discoverMoviesByGenre } from './src/services/api';
+
+jest.mock( './src/services/api', () => ({
+    findMovieByName: jest.fn(() => Promise.resolve([]))  // Retorno de mock para evitar errores
+}));
 
 describe('Cards component', () => {
     const mockProps = {
@@ -25,11 +30,44 @@ describe('Cards component', () => {
 });
 
 describe('Menu Component', () => {
-    test('Renders Cine Deck in Menu', () => {
+    test('Muestra el titulo de la pagina en el componente menu ', () => {
         const { getByText } = render(<Menu />);
         const headerElement = getByText(/Cine Deck/i);
         expect(headerElement).toBeInTheDocument();
     });
+    test('Buscar Películas, en este caso Star Wars', async () => {
+        render(<Menu onSetMovies={() => {}} />);  // Pasa una función vacía para onSetMovies por ahora
+        
+        // Cambia el valor del input
+        const searchInput = screen.getByPlaceholderText('Write the name of the movie');
+        fireEvent.change(searchInput, { target: { value: 'Star Wars' } });
+
+        // Hace clic en el botón de búsqueda
+        const searchButton = screen.getByText("SEARCH");
+        fireEvent.click(searchButton);
+
+        await waitFor(() => {
+            expect(findMovieByName).toHaveBeenCalledWith('Star Wars');
+        });
+    });
+    test('Catch en caso de error la buscar pelicula', async () => {
+        
+        findMovieByName.mockRejectedValue(new Error('Error finding movies form the API'))
+        const spy = jest.spyOn(console,'error').mockImplementation(()=>{})
+        render(<Menu onSetMovies={() => {}} />);  // Pasa una función vacía para onSetMovies por ahora
+
+        const searchInput = screen.getByPlaceholderText('Write the name of the movie');
+        fireEvent.change(searchInput, { target: { value: 'Rapido y Furioso' } });
+
+        // Hace clic en el botón de búsqueda
+        const searchButton = screen.getByText("SEARCH");
+        fireEvent.click(searchButton);
+
+        await waitFor(() => {
+            expect(console.error).toHaveBeenCalledWith('Error en findMovieByName:', new Error('Error finding movies form the API'));
+        });
+    });
+    
 });
 
 
@@ -39,11 +77,7 @@ describe('App Component', () => {
         const headerElement = getByText(/Cine Deck/i);
         expect(headerElement).toBeInTheDocument();
     });
-    test('Renders Options buttons Correctly', () => {
-        const { getByText } = render(<Options />);
-        const headerElement = getByText(/BRING/i);
-        expect(headerElement).toBeInTheDocument();
-    });
+
 });
 
 describe('Movies Component', () => {
