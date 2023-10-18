@@ -11,6 +11,11 @@ Organizar CSS Y CARDS
 Paginación State
 Estudiar map() y filter ()
 Concluir historias dse Usuario 1 y 2
+## <1.02> - <17-10-23 >
+Se terminó test del componente menu
+Se terminó test del componeente Movies
+Se terminó test del componeente App
+Se terminó test del componeente Cards
 
 ### Added
 
@@ -23,7 +28,11 @@ Funciones = 1. discoverMoviesByGenre() Con un select, agrega las opciones de gen
 ### Changed
 
 En esta sección detalla los cambios que hiciste a funcionalides ya existentes.
-Todas las cree desde 0 
+Se concluyeron test de Componentes Menu,App, Cards y Movies
+Movi función findMovieByName() Busqueda por nombre a componente Menu
+Refactorización de todas las funciones, se sepraron los servicios de los componentes.
+
+
 
 ### Fixed
 
