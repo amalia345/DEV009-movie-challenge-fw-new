@@ -13,7 +13,9 @@ export function discoverMoviesByGenre(genre) { //Código asincrono
                 title: movie.title,
                 date: movie.release_date,
                 poster: movie.poster_path,
-                stars: movie.vote_average
+                stars: movie.vote_average,
+                votes: movie.vote_count,
+                genres: movie.genre_ids
             }));
         })
         
@@ -31,7 +33,9 @@ export function discoverMoviesByYear(year) {
                 title: movie.title,
                 date: movie.release_date,
                 poster: movie.poster_path,
-                stars: movie.vote_average
+                stars: movie.vote_average,
+                votes: movie.vote_count,
+                genres: movie.genre_ids
             }));
         })
 }
@@ -49,7 +53,9 @@ export function findMovieByName(movieName) {
                 title: movie.title,
                 date: movie.release_date,
                 poster: movie.poster_path,
-                stars: movie.vote_average
+                stars: movie.vote_average,
+                votes: movie.vote_count,
+                genres: movie.genre_ids
             }));
         })
 }
@@ -57,18 +63,19 @@ export function findMovieByName(movieName) {
 // ------------ ------ REGRSEA LAS PELICULAS MAS POPULARES DEL API
 
 export function fetchPopularMovies() {
-    return fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=1`)
+    return fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&with_origin_country=JP&language=en-US&page=1`)
         .then(response => {
             if (!response.ok) { throw new Error('Error finding popular movies'); }
             return response.json();
         })
         .then(data => {
-            const movies = data.results.map(movie => ({
+            return data.results.map(movie => ({
                 title: movie.title,
                 date: movie.release_date,
                 poster: movie.poster_path,
-                stars: movie.vote_average
+                stars: movie.vote_average,
+                votes: movie.vote_count,
+                genres: movie.genre_ids
             }));
-            return movies;
         })
 };

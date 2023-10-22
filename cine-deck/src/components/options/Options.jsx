@@ -6,6 +6,7 @@ function Options({ onSetMovies }) {
     // ---------------------- Constantes  -----------------------
     const [releaseYear, setReleaseYear] = useState('');
     const [selectedGenre, setSelectedGenre] = useState('');
+    
     const predefinedGenres = [
         { id: 878, name: 'Science Fiction' },
         { id: 10752, name: 'War' },
@@ -59,6 +60,7 @@ function Options({ onSetMovies }) {
                 />
                 <button onClick={handleMoviesByYear}>BRING</button>
             </div>
+
             <div>
                 <select
                     value={selectedGenre}
@@ -72,8 +74,9 @@ function Options({ onSetMovies }) {
                     ))}
                 </select>
             </div>
+
             <div>
-                <button onClick={handlePopularMovies}>POPULAR</button>
+                <button onClick={handlePopularMovies}>POPULAR IN JP</button>
             </div>
         </article>
     );

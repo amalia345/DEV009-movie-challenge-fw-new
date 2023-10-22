@@ -8,7 +8,16 @@ import Options from '../options/Options';
 function App() {
   const [selectedMovies, setSelectedMovies] = useState([]);
   const [currentPage, setCurrentPage] = useState(1)
-
+  const [detailedMovie, setDetailedMovie] = useState([null]);
+  // funcion que abre el detailed pasando el setter de la pelicla escogido detailedMovie setDetailedMovie
+  function handleMovieSelect(movie) {
+    setDetailedMovie(movie)
+  }
+  function closeDetailedView() {
+    setDetailedMovie([null])
+  }
+  // funcion que cierra el detaield  handleMovieSelect
+  // funcion que cierra el detaield  closeDetailedView
   return (
     <div className="App" >
       <header className="App-header" >
@@ -18,7 +27,14 @@ function App() {
         <Options onSetMovies={setSelectedMovies} />
       </section>
       <main className="App-main" >
-        <Movies titles={selectedMovies} currentPage={currentPage} setCurrentPage={setCurrentPage}/>
+        <Movies
+        titles={selectedMovies} 
+        currentPage={currentPage} 
+        setCurrentPage={setCurrentPage}
+        onSelect = {handleMovieSelect}
+        onClose = {closeDetailedView}
+        detailedMovie={detailedMovie}
+        />
       </main>
     </div>
   );

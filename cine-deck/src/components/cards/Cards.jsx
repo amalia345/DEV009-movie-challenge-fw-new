@@ -15,6 +15,9 @@ function Cards(props) {//Props no se puede modificar
                 <p>
                     {props.dateMovie.split('-')[0]} {estrellas}
                 </p>
+                <p>
+                    {props.votesMovie} {props.genresMovie}
+                </p>
             </div>
             <img src={`${baseURL}${props.posterMovie} `}>
             </img>

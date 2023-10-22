@@ -9,6 +9,7 @@ function Menu({ onSetMovies }) {
     function handleMovieByName() {
         findMovieByName(movieName)
             .then(movies => {
+                setMovieName('')//limpiador, se cambia el estado de movie nadme dentro del imput 
                 onSetMovies(movies);
             })
             .catch(error => {
