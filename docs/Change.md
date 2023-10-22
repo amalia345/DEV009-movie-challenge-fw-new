@@ -11,13 +11,11 @@ Organizar CSS Y CARDS
 Paginación State
 Estudiar map() y filter ()
 Concluir historias dse Usuario 1 y 2
-Conclui testeo de  
 ## <1.02> - <17-10-23 >
 Se terminó test del componente menu
 Se terminó test del componeente Movies
 Se terminó test del componeente App
 Se terminó test del componeente Cards
-
 
 ### Added
 
@@ -45,4 +43,4 @@ Effect(()=>{
 ### Removed
 
 En esta sección incluye las funcionalidades eliminadas.
-Cree una funcion que retornaba por default 10 peliculas al asar pero la eliminé.
+Cree una funcionque retornaba por default 10 peliculas al asar pero la eliminé.
