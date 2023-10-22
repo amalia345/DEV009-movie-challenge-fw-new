@@ -1,5 +1,6 @@
-import {  useState } from 'react';
+import { useState } from 'react';
 import { findMovieByName } from '../../services/api.js'
+import './menu.css'
 
 //const [movieName, setMovieName] = useState('');
 
@@ -18,16 +19,18 @@ function Menu({ onSetMovies }) {
     }
 
     return (
-        <div>
+        <div id='menuDiv'>
             <h1>Cine Deck</h1>
-            <input
-                id="byName"
-                type='text'
-                placeholder="Write the name of the movie"
-                value={movieName}
-                onChange={e => setMovieName(e.target.value)}
-            />
-            <button onClick={handleMovieByName}>SEARCH</button>
+            <div>
+                <input
+                    id="byName"
+                    type='text'
+                    placeholder="Write the name of the movie"
+                    value={movieName}
+                    onChange={e => setMovieName(e.target.value)}
+                />
+                <button onClick={handleMovieByName}>SEARCH</button>
+            </div>
         </div>
     )
 }

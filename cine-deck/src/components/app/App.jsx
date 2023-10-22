@@ -8,13 +8,13 @@ import Options from '../options/Options';
 function App() {
   const [selectedMovies, setSelectedMovies] = useState([]);
   const [currentPage, setCurrentPage] = useState(1)
-  const [detailedMovie, setDetailedMovie] = useState([null]);
+  const [detailedMovie, setDetailedMovie] = useState(null);
   // funcion que abre el detailed pasando el setter de la pelicla escogido detailedMovie setDetailedMovie
   function handleMovieSelect(movie) {
     setDetailedMovie(movie)
   }
   function closeDetailedView() {
-    setDetailedMovie([null])
+    setDetailedMovie(null)
   }
   // funcion que cierra el detaield  handleMovieSelect
   // funcion que cierra el detaield  closeDetailedView

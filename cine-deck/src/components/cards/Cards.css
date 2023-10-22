@@ -1,21 +1,53 @@
-.Cards-card{
+.Cards-card {
     color: rgb(110, 174, 109);
+    color:rgb(230, 0, 164) ;
     display: flex;
     flex-direction: column-reverse;
-    background-color: rgb(45, 45, 109);
+    background-color: rgb(16, 31, 71);
     font-size: 1.2rem;
-    width: 200px;
-    height: 400px;
-    margin: 20px 10px;
-    padding: 20px;
+    width: 230px;
+    height: 380px;
+    margin: 20px 20px;
     border-radius: 8px;
-    box-shadow: 11px 11px 15px 10px rgba(0,0,0,0.62);
+    box-shadow: 11px 11px 15px 10px rgba(0, 0, 0, 0.62);
 }
-.titles{
-    
+.Cards-card:hover {
+    box-shadow: 16px 15px 18px 12px rgba(69, 69, 69, 0.62);
+}
+
+.Cards-card.detailed {
+    width: 600px;
+    height: 450px;
+    flex-direction: row;
+}
+
+.Cards-card img {
+    height: 220%; 
+    object-fit: cover; /* Mantener proporciones al escalar la imagen */
+    margin-bottom: 7px;
+}
+
+
+.Cards-card.detailed img {
+    height: 100%;
+    width: 70%; /* Ajusta este valor si es necesario */
+    order: -1; /* Esto hará que la imagen aparezca primero (a la izquierda) */
+    object-fit: cover; /* Mantener proporciones al escalar la imagen */
+    max-width: 100%;   /* Asegura que la imagen nunca sea más ancha que su contenedor */
+    height: auto; 
+}
+
+.Cards-card.detailed .titles {
+    width: 40%; /* Ajusta este valor si es necesario */
+    padding: 20px; /* Añade o ajusta el padding según tus necesidades */
+    /* Si deseas agregar más estilos, hazlo aquí */
+}
+
+.titles {
     height: 170px;
 }
-.titles h3, h5{
+
+.titles h3, .titles h5 {
     margin: 0;
     padding: 0;
 }

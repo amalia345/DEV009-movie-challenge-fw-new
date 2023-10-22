@@ -6,9 +6,11 @@ function Movies({ titles, currentPage, setCurrentPage, detailedMovie, onClose, o
     const totalPages = Math.ceil(titles.length / moviesPerPage)
     const selectedTitles = titles.slice((currentPage - 1) * moviesPerPage, currentPage * moviesPerPage)
     console.log(detailedMovie, ' Valor de selected movies ');
-    if (!detailedMovie) {
+
+    if (detailedMovie) {
         return (
             <div className="Movies-cards">
+                <button id="closer-button" onClick={onClose}>Back to Movies</button>
                 <Cards
                     nameMovie={detailedMovie.title}
                     dateMovie={detailedMovie.date}
@@ -16,9 +18,10 @@ function Movies({ titles, currentPage, setCurrentPage, detailedMovie, onClose, o
                     posterMovie={detailedMovie.poster}
                     votesMovie={detailedMovie.votes}
                     genresMovie={detailedMovie.genres}
+                    isDetailed={true} // un prop que creamos para que card sepa si esta en detailed o no
                     onSelect={() => onSelect(detailedMovie)}
                 />
-                <button onClick={onClose}>Close</button>
+                
             </div>
         );
     }
@@ -26,14 +29,13 @@ function Movies({ titles, currentPage, setCurrentPage, detailedMovie, onClose, o
     return (
         <div>
             <div className="Movies-cards">
-                {selectedTitles.map((movie) => ( //Map ciclo for que funciona en react 
+            {selectedTitles.map((movie) => (
                     <Cards
+                        key={movie.title}
                         nameMovie={movie.title}
-                        dateMovie={movie.date}
-                        starMovie={movie.stars}
                         posterMovie={movie.poster}
-                        votesMovie={movie.votes}
                         genresMovie={movie.genres}
+                        onSelect={() => onSelect(movie)}
                     />
                 ))}
             </div>
@@ -47,8 +49,6 @@ function Movies({ titles, currentPage, setCurrentPage, detailedMovie, onClose, o
                         {index + 1}
                     </button>
                 ))}
-
-
             </div>
         </div>
     );

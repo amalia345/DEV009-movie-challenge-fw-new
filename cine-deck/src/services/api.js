@@ -15,7 +15,8 @@ export function discoverMoviesByGenre(genre) { //Código asincrono
                 poster: movie.poster_path,
                 stars: movie.vote_average,
                 votes: movie.vote_count,
-                genres: movie.genre_ids
+                genres: movie.genre_ids,
+                description: movie.overview
             }));
         })
         
@@ -35,7 +36,8 @@ export function discoverMoviesByYear(year) {
                 poster: movie.poster_path,
                 stars: movie.vote_average,
                 votes: movie.vote_count,
-                genres: movie.genre_ids
+                genres: movie.genre_ids,
+                description: movie.overview
             }));
         })
 }
@@ -55,7 +57,8 @@ export function findMovieByName(movieName) {
                 poster: movie.poster_path,
                 stars: movie.vote_average,
                 votes: movie.vote_count,
-                genres: movie.genre_ids
+                genres: movie.genre_ids,
+                description: movie.overview
             }));
         })
 }
@@ -75,7 +78,8 @@ export function fetchPopularMovies() {
                 poster: movie.poster_path,
                 stars: movie.vote_average,
                 votes: movie.vote_count,
-                genres: movie.genre_ids
+                genres: movie.genre_ids,
+                description: movie.overview
             }));
         })
 };

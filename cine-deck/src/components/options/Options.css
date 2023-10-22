@@ -1,37 +1,48 @@
-.seccionBusqueda button,input,select{
-    background: transparent;
+.seccionBusqueda button,
+input,
+select {
+    background: black;
     color: inherit;
     outline: none;
-    border: 4PX rgb(51, 66, 186) SOLID;
+    display: ;
+    border: 3PX #FF8A14 SOLID;
     transition: background-color 0.4s;
     font-size: 1rem;
     margin: 5px;
-    padding : 10px 15px;
+    padding: 10px 15px;
     border-radius: 0px;
     appearance: none;
-    text-align: center;
+    text-align: space-around;
     box-shadow: none;
     cursor: pointer;
     transition: all 0.3s ease;
 }
-.seccionBusqueda input{
-    background: rgb(45, 45, 109);
+
+.seccionBusqueda input {
+    background: black;
     text-align: left;
-    
-    border-radius: 25px;
+    box-shadow: 0 0 5px #8ce436;
+    border-radius: 5px;
 }
-.seccionBusqueda  select{
-    background: rgb(82, 82, 198);
+
+.seccionBusqueda select {
+    background-color: transparent;
+    box-shadow: 0 0 5px #8ce436;
     text-align: left;
+    margin-right: 70px;
+    margin-left: 120px;
 }
-.seccionBusqueda  button{
-    background-color:rgb(51, 66, 186) ;
+
+.seccionBusqueda button {
+    background-color: transparent;
     box-shadow: 0 0 5px #8ce436;
 }
 
-.seccionBusqueda   button:hover {
-    background-color:transparent ;
+.seccionBusqueda button:hover {
+    background-color:rgb(230, 0, 164) ;
+    
 }
+
 .seccionBusqueda {
     display: flex;
     justify-content: center;

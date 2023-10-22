@@ -22,13 +22,31 @@
     appearance: none;
     text-align: center;
     box-shadow: none;
-    border: 4PX rgb(91, 102, 187) SOLID;
+    border: 3PX #FF8A14 SOLID;
     transition: background-color 0.4s;
 }
 .pagination button:hover {
-    background-color:rgb(91, 102, 187) ;
+    background-color:rgb(230, 0, 164) ;
 }
 .pagination button.active {
-    background-color:rgb(88, 97, 169);
+    background-color:rgb(230, 0, 164) ;
     color:black ;
+}
+
+#closer-button{
+    font-size: 1.3rem;
+    margin: 15rem 0;
+    padding: 1rem 1rem;
+    background: none;
+    color: inherit;
+    outline: none;
+    -moz-appearance: none;
+    appearance: none;
+    text-align: center;
+    box-shadow: none;
+    border: 4PX rgb(91, 102, 187) SOLID;
+    transition: background-color 0.4s;
+}
+#closer-button:hover {
+    background-color:rgb(91, 102, 187) ;
 }
