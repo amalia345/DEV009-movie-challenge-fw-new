@@ -16,35 +16,18 @@
 
 ## 1. Preámbulo
 
-La manera en que vemos películas ha cambiado radicalmente durante los últimos
-años debido, en parte, a la aparición de los servicios de
-[_streaming_](https://es.wikipedia.org/wiki/Streaming) que nos permiten hacerlo
-desde donde estemos y en cualquier momento. El mejor reflejo de este fenómeno es
-el éxito de Netflix, HBO y Disney+, etc.
+CINE DECK es una plataforma que sirve como un catálogo en la cual los usuarios pueden visualizar, explorar, buscar o aprender sobre el mundo del cine, se pueden filtrar los nombres de las peliculas, o los años en que fueron lanzadas, así como también se, puede seleccionar alguno de los generos principales como Horror o Documentales, de esta manera se filtraran los gneeros existentes.
 
-Creemos que hay una gran oportunidad de proponer productos/experiencias
-innovadoras de todo tipo utilizando datos de películas (directorxs, actorxs,
-sagas, secuelas, fechas, etc.). Podríamos pensar en juegos, comunidades,
-catálogos, recomendaciones basadas en gustos personales, etc. (sólo por
-mencionar algunas ideas obvias).
-
-![Pelis](https://live.staticflickr.com/117/257368762_38bf6fcf9f_h.jpg)
+![Pelis]()
 
 ## 2. Resumen del proyecto
 
-En este proyecto, crearás una página web destinada a visualizar, filtrar y
-ordenar el catálogo de películas de
-[_The Movie Database API V3_](https://developer.themoviedb.org/docs).
-Esta página puede servir como un catálogo de
-películas general, pero también, si te animas,
-puedes considerar la posibilidad de diseñarla
-para un público y usuarias específicas
-con preferencias como "películas western"
-o "películas de las 80's" por ejemplo.
+En este proyecto, creé una página web destinada a visualizar, filtrar y
+ordenar el catálogo de películas de la API:  (The Movie data base.)
+Esta página puede servir como un catálogo de películas general, pero también incluí una opción para visualizar las películas más populares en Japón, como un guiño al cine oriental y también al anime. 
 
-Para implementar este proyecto deberás elegir un framework entre
-[React](https://reactjs.org/) y [Angular](https://angular.io/).
-Al elegir un _framework_ o _librería_ para nuestra interfaz, nos apoyamos en una
+Para implementar este proyecto elegí un framework (REACT)
+Al elegir un _framework_ o _librería_ para mi interfaz, nos apoyamos en una
 serie de convenciones e implementaciones _probadas_ y _documentadas_ para
 resolver un problema común a toda interfaz web:
 [_mantener la interfaz sincronizada con el estado_](https://medium.com/dailyjs/the-deepest-reason-why-modern-javascript-frameworks-exist-933b86ebc445).
@@ -63,7 +46,7 @@ los que trabajes.
 ## 3. Objetivos de aprendizaje
 
 
-Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en tu proyecto. Piensa en eso al decidir tu estrategia de trabajo.
+Estos son los objetivos que he llegado a entender y aplicar en mi proyecto:
 
 ### HTML
 
@@ -229,65 +212,6 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
   * [Control de acceso HTTP (CORS) - MDN](https://developer.mozilla.org/es/docs/Web/HTTP/CORS)
 </p></details>
 
-### Angular
-
-- [ ] **Components & templates**
-
-  <details><summary>Links</summary><p>
-
-  * [Angular Components Overview - Documentación oficial (en inglés)](https://angular.io/guide/component-overview)
-  * [Introduction to components and templates - Documentación oficial (en inglés)](https://angular.io/guide/architecture-components#introduction-to-components)
-</p></details>
-
-- [ ] **Directivas estructurales (ngIf / ngFor)**
-
-  <details><summary>Links</summary><p>
-
-  * [Writing structural directives - Documentación oficial (en inglés)](https://angular.io/guide/structural-directives)
-</p></details>
-
-- [ ] **@Input | @Output**
-
-  <details><summary>Links</summary><p>
-
-  * [Component interaction - Documentación oficial (en inglés)](https://angular.io/guide/component-interaction#component-interaction)
-</p></details>
-
-- [ ] **Creación y uso de servicios**
-
-  <details><summary>Links</summary><p>
-
-  * [Providing services - Documentación oficial (en inglés)](https://angular.io/guide/architecture-services#providing-services)
-</p></details>
-
-- [ ] **Manejo de rutas**
-
-  <details><summary>Links</summary><p>
-
-  * [In-app navigation: routing to views - Documentación oficial (en inglés)](https://angular.io/guide/router)
-</p></details>
-
-- [ ] **Creación y uso de Observables.**
-
-  <details><summary>Links</summary><p>
-
-  * [Observables in Angular - Documentación oficial (en inglés)](https://angular.io/guide/observables-in-angular)
-</p></details>
-
-- [ ] **Uso de HttpClient**
-
-  <details><summary>Links</summary><p>
-
-  * [Communicating with backend services using HTTP - Documentación oficial (en inglés)](https://angular.io/guide/http)
-</p></details>
-
-- [ ] **Estilos de componentes (ngStyle / ngClass)**
-
-  <details><summary>Links</summary><p>
-
-  * [Template syntax - Documentación oficial (en inglés)](https://angular.io/guide/template-syntax#built-in-directives)
-</p></details>
-
 ### React
 
 - [ ] **JSX**
@@ -353,78 +277,7 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
   * [Quick Start - Documentación oficial (en inglés)](https://reactrouter.com/en/main/start/tutorial)
 </p></details>
 
-### Vue
 
-- [ ] **Instancia de Vue.js**
-
-  <details><summary>Links</summary><p>
-
-  * [La instancia Vue - Documentación oficial](https://es.vuejs.org/v2/guide/instance.html)
-</p></details>
-
-- [ ] **Datos y métodos**
-
-  <details><summary>Links</summary><p>
-
-  * [Datos y Métodos - Documentación oficial](https://es.vuejs.org/v2/guide/instance.html#Datos-y-Metodos)
-</p></details>
-
-- [ ] **Uso y creación de componentes**
-
-  <details><summary>Links</summary><p>
-
-  * [Conceptos Básicos de Componentes - Documentación oficial](https://es.vuejs.org/v2/guide/components.html)
-</p></details>
-
-- [ ] **Props**
-
-  <details><summary>Links</summary><p>
-
-  * [Pasando datos a componentes secundarios con Props - Documentación oficial](https://es.vuejs.org/v2/guide/components.html#Pasando-datos-a-componentes-secundarios-con-Props)
-</p></details>
-
-- [ ] **Directivas (v-bind | v-model)**
-
-  <details><summary>Links</summary><p>
-
-  * [v-bind - Documentación oficial](https://es.vuejs.org/v2/api/#v-bind)
-  * [Binding en Formularios - Documentación oficial](https://es.vuejs.org/v2/guide/forms.html)
-</p></details>
-
-- [ ] **Iteración (v-for)**
-
-  <details><summary>Links</summary><p>
-
-  * [Mapeando una matriz a elementos con v-for - Documentación oficial](https://es.vuejs.org/v2/guide/list.html#Mapeando-una-matriz-a-elementos-con-v-for)
-</p></details>
-
-- [ ] **Eventos (v-on)**
-
-  <details><summary>Links</summary><p>
-
-  * [Manejo de eventos - Documentación oficial](https://es.vuejs.org/v2/guide/events.html)
-</p></details>
-
-- [ ] **Propiedades Computadas y Observadores**
-
-  <details><summary>Links</summary><p>
-
-  * [Propiedades Computadas y Observadores](https://es.vuejs.org/v2/guide/computed.html)
-</p></details>
-
-- [ ] **Routing**
-
-  <details><summary>Links</summary><p>
-
-  * [Getting Started - Documentación oficial de Vue Router](https://router.vuejs.org/guide/#html)
-</p></details>
-
-- [ ] **Clases y Estilos**
-
-  <details><summary>Links</summary><p>
-
-  * [Enlace Clases y Estilos - Documentación oficial](https://es.vuejs.org/v2/guide/class-and-style.html)
-</p></details>
 
 ### typescript
 
@@ -783,12 +636,6 @@ y life skills desde tu dashboard de estudiante.
 Si no has completado todo lo anterior, no consideramos que estás lista
 para tu sesión de Project Feedback.
 
-## 9. Pistas, tips y lecturas complementarias
-
-Súmate al canal de Slack
-[#project-movie-challenge-fw](https://claseslaboratoria.slack.com/archives/C04A0GS1WJX)
-para conversar y pedir ayuda del proyecto.
-
 ### Prototipo de alta fidelidad
 
 Tomando como base el prototipo de baja fidelidad entregado, crea uno de alta
@@ -852,5 +699,4 @@ te sugiere el framework.
 ### Frameworks / libraries
 
 - [React](https://react.dev/)
-- [Angular](https://angular.io/)
 - [ViteJs](https://vitejs.dev/)
