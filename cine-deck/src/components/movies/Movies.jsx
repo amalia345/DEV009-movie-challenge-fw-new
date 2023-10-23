@@ -28,14 +28,15 @@ function Movies({ titles, currentPage, setCurrentPage, detailedMovie, onClose, o
 
     return (
         <div>
-            <div className="Movies-cards">
-            {selectedTitles.map((movie) => (
+            <div className="Movies-cards ">
+            {selectedTitles && selectedTitles.map((movie) => (
                     <Cards
                         key={movie.title}
                         nameMovie={movie.title}
                         posterMovie={movie.poster}
                         genresMovie={movie.genres}
                         onSelect={() => onSelect(movie)}
+                        data-testid="movie-card" // Añade esto
                     />
                 ))}
             </div>
@@ -45,6 +46,7 @@ function Movies({ titles, currentPage, setCurrentPage, detailedMovie, onClose, o
                         key={index}
                         onClick={() => setCurrentPage(index + 1)}
                         className={currentPage === index + 1 ? 'active' : ''}
+                        data-testid="pagination-button" // Añade esto
                     >
                         {index + 1}
                     </button>

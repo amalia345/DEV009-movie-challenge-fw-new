@@ -58,7 +58,7 @@ function Options({ onSetMovies }) {
                     value={releaseYear}
                     onChange={e => setReleaseYear(e.target.value)}
                 />
-                <button onClick={handleMoviesByYear}>BRING</button>
+                <button onClick={handleMoviesByYear}>Bring by year</button>
             </div>
 
             <div>
@@ -76,7 +76,7 @@ function Options({ onSetMovies }) {
             </div>
 
             <div>
-                <button onClick={handlePopularMovies}>POPULAR IN JP</button>
+                <button onClick={handlePopularMovies}>Popular in Japan</button>
             </div>
         </article>
     );
