@@ -51,6 +51,8 @@ React tiene una arquitectura basada en componentes que me proporciona la flexibi
 
 
 Estos son los objetivos que he llegado a entender y aplicar en mi proyecto:
+Abvance del proyecto 
+![](https://raw.githubusercontent.com/amalia345/DEV009-movie-challenge-fw-new/main/docs/Captura%20de%20pantalla%202023-10-20%20184119.png)
 
 ### HTML
 
@@ -233,6 +235,17 @@ Estos son los objetivos que he llegado a entender y aplicar en mi proyecto:
   * [Documentación oficial de Typescript](https://www.typescriptlang.org/docs/handbook/2/classes.html#getters--setters)
 
 ### Diseño de producto
+### Prototipo de baja fidelidad
+Aquí se muestran la primera iteración del prototipo de baja fidelidad
+![](https://raw.githubusercontent.com/amalia345/DEV009-movie-challenge-fw-new/main/docs/movie-list.png)
+![](https://raw.githubusercontent.com/amalia345/DEV009-movie-challenge-fw-new/main/docs/movie-detail.png)
+
+### Prototipo de Alta fidelidad
+![](https://raw.githubusercontent.com/amalia345/DEV009-movie-challenge-fw-new/main/docs/Captura%20de%20pantalla%202023-10-24%20094522.png)
+![](https://raw.githubusercontent.com/amalia345/DEV009-movie-challenge-fw-new/main/docs/Captura%20de%20pantalla%202023-10-24%20094535.png)
+
+### Paleta de colores: 
+![](https://raw.githubusercontent.com/amalia345/DEV009-movie-challenge-fw-new/main/docs/Captura%20de%20pantalla%202023-10-24%20093031.png)
 
 - [ ] **Crear prototipos de alta fidelidad que incluyan interacciones**
 
@@ -285,20 +298,6 @@ empaquetar y desplegar la aplicación respectivamente.
 
 ## 6. Criterios mínimos de aceptación del proyecto
 
-### Prototipo de baja fidelidad
-
-El [_Product Owner_](https://www.youtube.com/watch?v=r2hU7MVIzxs&t=202s)
-nos entrega una primera iteración del prototipo de baja fidelidad
-de la aplicación en [esta imagen](./docs/movie-list.png) y esta [otra](./docs/movie-detail.png).
-
-### Definición del producto
-
-El [_Product Owner_](https://www.youtube.com/watch?v=r2hU7MVIzxs&t=202s)
-nos presenta este _backlog_ que es el resultado de su trabajo con el clientx
-hasta hoy.
-
----
-
 #### [Historia de usuario 1] Listado de películas
 
 Yo como usuaria quiero visualizar en un tabla (filas y columnas) el catálogo de películas
@@ -309,12 +308,6 @@ Yo como usuaria quiero visualizar en un tabla (filas y columnas) el catálogo de
 - La aplicación cuenta con una paginación para explorar el catálogo por páginas.
 - Para cada película se debe mostrar como mínimo:
 poster, título original y año de lanzamiento.
-
-##### Definición de terminado
-
-- Los componentes desarrollados deben contar con test unitarios.
-
----
 
 #### [Historia de usuario 2] Filtro y ordenamiento
 
