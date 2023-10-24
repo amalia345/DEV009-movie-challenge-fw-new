@@ -2,13 +2,11 @@ import { useState } from 'react';
 import { findMovieByName } from '../../services/api.js'
 import './menu.css'
 
-//const [movieName, setMovieName] = useState('');
-
 function Menu({ onSetMovies }) {
     const [movieName, setMovieName] = useState('');
 
     function handleMovieByName() {
-        findMovieByName(movieName)
+        findMovieByName(movieName)//Lllamamos a la función metiendo como parametro el estado actual de movie name 
             .then(movies => {
                 setMovieName('')//limpiador, se cambia el estado de movie nadme dentro del imput 
                 onSetMovies(movies);

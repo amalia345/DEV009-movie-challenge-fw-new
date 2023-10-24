@@ -8,10 +8,10 @@ import Options from '../options/Options';
 function App() {
   const [selectedMovies, setSelectedMovies] = useState([]); //En este estado guarno mis peliculas
   const [currentPage, setCurrentPage] = useState(1)//En este estado guardo la pagina actual de la paginación 
-  const [detailedMovie, setDetailedMovie] = useState(null);//Es el estado que guarda qué pelicula vamos a mostrar a detalle 
+  const [detailedMovie, setDetailedMovie] = useState(null);//Es el estado que guarda pelicula detallada
   // funcion que abre el detailed pasando el setter de la pelicla escogido detailedMovie setDetailedMovie
   function handleMovieSelect(movie) { //Función para seleccionar un pelicula y mostrar detalles
-    setDetailedMovie(movie)
+    setDetailedMovie(movie)//Parametro, (movie) que seleccionó el usuario 
   }
   function closeDetailedView() { //Funcion para cerrar la pelicula detallada 
     setDetailedMovie(null)

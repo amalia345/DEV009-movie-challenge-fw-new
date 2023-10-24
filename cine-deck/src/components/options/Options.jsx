@@ -4,7 +4,7 @@ import { fetchPopularMovies, discoverMoviesByYear, discoverMoviesByGenre } from 
 
 function Options({ onSetMovies }) {
     // ---------------------- Constantes  -----------------------
-    const [releaseYear, setReleaseYear] = useState('');
+    const [releaseYear, setReleaseYear] = useState('');//Año que seleccionó el usuario
     const [selectedGenre, setSelectedGenre] = useState('');
     
     const predefinedGenres = [
@@ -16,6 +16,15 @@ function Options({ onSetMovies }) {
         { id: 10749, name: 'Romance' }
     ];
     // ---------------------- Funciones que manejan el API  -----------------------
+    function handleMoviesByYear() {
+        discoverMoviesByYear(releaseYear)//Parametro
+            .then(movies => {//Respuesta de API, Un objeto
+                onSetMovies(movies);//Metemos la respuerta de la API al estado selctedMovies del componente app 
+            })
+            .catch(error => {
+                console.error("Error en findMovieByYear:", error);
+            });
+    }
     function handleMoviesByGenre() {
         discoverMoviesByGenre(selectedGenre)
             .then(movies => {
@@ -25,15 +34,7 @@ function Options({ onSetMovies }) {
                 console.error("Error en findMovieByGenre:", error);
             });
     }
-    function handleMoviesByYear() {
-        discoverMoviesByYear(releaseYear)
-            .then(movies => {
-                onSetMovies(movies);
-            })
-            .catch(error => {
-                console.error("Error en findMovieByYear:", error);
-            });
-    }
+    
     function handlePopularMovies() {
         fetchPopularMovies()
             .then(movies => {
@@ -45,7 +46,7 @@ function Options({ onSetMovies }) {
     }
     // ---------------------- Effects que maneja el cmabio de los select  -----------------------
     useEffect(() => {
-        handleMoviesByGenre();
+        handleMoviesByGenre();//No necesita boton de click, en cuento cambia se vuelve a llamar a la fucnion 
     }, [selectedGenre])
 
     // ---------------------- RETURN -----------------------

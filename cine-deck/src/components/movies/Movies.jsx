@@ -3,9 +3,8 @@ import './Movies.css'
 function Movies({ titles, currentPage, setCurrentPage, detailedMovie, onClose, onSelect }) {
 
     const moviesPerPage = 5;
-    const totalPages = Math.ceil(titles.length / moviesPerPage)
-    const selectedTitles = titles.slice((currentPage - 1) * moviesPerPage, currentPage * moviesPerPage)
-    console.log(detailedMovie, ' Valor de selected movies ');
+    const totalPages = Math.ceil(titles.length / moviesPerPage)//Calculo de paginacion 
+    const selectedTitles = titles.slice((currentPage - 1) * moviesPerPage, currentPage * moviesPerPage)//Los titles que voy a mostrar en esta pagina
 
     if (detailedMovie) {
         return (
@@ -18,7 +17,7 @@ function Movies({ titles, currentPage, setCurrentPage, detailedMovie, onClose, o
                     posterMovie={detailedMovie.poster}
                     votesMovie={detailedMovie.votes}
                     genresMovie={detailedMovie.genres}
-                    isDetailed={true} // un prop que creamos para que card sepa si esta en detailed o no
+                    isDetailed={true} // un booleano, prop que creamos para que card sepa si esta en detailed o no
                     onSelect={() => onSelect(detailedMovie)}
                 />
                 
@@ -26,27 +25,28 @@ function Movies({ titles, currentPage, setCurrentPage, detailedMovie, onClose, o
         );
     }
 
-    return (
+    else {
+        return (
         <div>
             <div className="Movies-cards ">
             {selectedTitles && selectedTitles.map((movie) => (
                     <Cards
-                        key={movie.title}
+                        
                         nameMovie={movie.title}
                         posterMovie={movie.poster}
                         genresMovie={movie.genres}
-                        onSelect={() => onSelect(movie)}
-                        data-testid="movie-card" // Añade esto
+                        onSelect={() => onSelect(movie)}//Funcion para checar en que momento se le da click a una tarjeta 
+                        data-testid="movie-card" // Id para jest
                     />
                 ))}
             </div>
             <div className="pagination">
-                {[...Array(totalPages)].map((_, index) => (
+                {[...Array(totalPages)].map((_, index) => (//destructuracion de un array para mapearlo
                     <button
                         key={index}
-                        onClick={() => setCurrentPage(index + 1)}
-                        className={currentPage === index + 1 ? 'active' : ''}
-                        data-testid="pagination-button" // Añade esto
+                        onClick={() => setCurrentPage(index + 1)} //mapea botones
+                        className={currentPage === index + 1 ? 'active' : ''}//Para darle estilos a la paginación activa 
+                        data-testid="pagination-button" // Id para jest 
                     >
                         {index + 1}
                     </button>
@@ -54,6 +54,7 @@ function Movies({ titles, currentPage, setCurrentPage, detailedMovie, onClose, o
             </div>
         </div>
     );
+}
 }
 
 export default Movies;

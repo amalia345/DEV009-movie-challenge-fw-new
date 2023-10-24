@@ -11,7 +11,7 @@ jest.mock('./src/services/api', () => ({
     findMovieByName: jest.fn(() => Promise.resolve([]))  // Retorno de mock para evitar errores
 }));
 
-describe('Componenete Cards ', () => {
+describe('Componenete Cards ', () => { //Agrpamops varios test para un componente
     const mockProps = {
         nameMovie: 'Pelicula chida',
         dateMovie: '2022-10-11',
@@ -21,13 +21,13 @@ describe('Componenete Cards ', () => {
         votesMovie: 12500,
         isDetailed: true
     };
-    test('Renderiza el Titulo de la Pelicula', () => {
-        const { getByText } = render(<Cards {...mockProps} />);
-        expect(getByText('Pelicula chida')).toBeInTheDocument();
+    test('Renderiza el Titulo de la Pelicula', () => { //Declaro el test 
+        const { getByText } = render(<Cards {...mockProps} />); //Consulta a la biblioteca de test, guardas la consulta del componente del mock falso
+        expect(getByText('Pelicula chida')).toBeInTheDocument();//Se espera el título de la pelicula 
     })
     test('Renderiza el año correctamente', () => {
-        const { getByText } = render(<Cards {...mockProps} />);
-        expect(getByText('Year: 2022')).toBeInTheDocument();
+        const { getByText } = render(<Cards {...mockProps} />); 
+        expect(getByText('Year: 2022')).toBeInTheDocument();//Se espera el año
     })
     test('Renderiza el total de votos correctamente', () => {
         const { getByText } = render(<Cards {...mockProps} />);
@@ -35,9 +35,9 @@ describe('Componenete Cards ', () => {
 
     })
     test('Aplica la clase "Cards-card detailed" cuando isDetailed es verdadero', () => {
-        render(<Cards {...mockProps} isDetailed={true} />);
-        const card = screen.getByTestId('card-element');
-        expect(card).toHaveClass('Cards-card detailed');
+        render(<Cards {...mockProps} isDetailed={true} />); //Renderiza el elemento pero con la variable isDatailed
+        const card = screen.getByTestId('card-element');//Usamos los id de jest para seleccional el elemento 
+        expect(card).toHaveClass('Cards-card detailed');//Checamos si el elemento tiene la clase cirrecta
     });
     
     test('Aplica la clase "Cards-card" cuando isDetailed es falso o no se proporciona', () => {
@@ -98,15 +98,6 @@ describe('App Component', () => {
 
 describe('Movies Component', () => {
 
-    const mockTitles = [
-        {
-            title: "Test Movie",
-            date: "2023-10-22",
-            stars: 5,
-            poster: "test.jpg",
-            genres: [1, 2, 3]
-        }
-    ];
     const starWarsMovies = [
         { nameMovie: 'Star Wars: Episode IV - A New Hope', dateMovie: '1977-05-25', starMovie: 4, posterMovie: 'starwars1.jpg', genresMovie: [878], votesMovie: 12000 },
         { nameMovie: 'Star Wars: Episode V - The Empire Strikes Back', dateMovie: '1980-05-21', starMovie: 5, posterMovie: 'starwars2.jpg', genresMovie: [878], votesMovie: 15000 },
@@ -117,7 +108,7 @@ describe('Movies Component', () => {
         { nameMovie: 'Star Wars: Episode VII - The Force Awakens', dateMovie: '2015-12-18', starMovie: 4, posterMovie: 'starwars7.jpg', genresMovie: [878], votesMovie: 14000 },
     ];
     
-    test("renders movie cards and pagination", () => {
+    test("Renderiza el número de cards y botones de paginación correctos para 7 peliculas", () => {
         const { getAllByTestId } = render(
             <Movies titles={starWarsMovies} currentPage={1} setCurrentPage={jest.fn()} onSelect={jest.fn()} />
         );
