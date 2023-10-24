@@ -15,31 +15,35 @@
 
 ## 1. Preámbulo
 
-CINE DECK es una plataforma que sirve como un catálogo en la cual los usuarios pueden visualizar, explorar, buscar o aprender sobre el mundo del cine, se pueden filtrar los nombres de las peliculas, o los años en que fueron lanzadas, así como también se, puede seleccionar alguno de los generos principales como Horror o Documentales, de esta manera se filtraran los gneeros existentes.
+CINE DECK se presenta como un catálogo cinematográfico donde los entusiastas del cine tienen la posibilidad de explorar, buscar y sumergirse en el vasto mundo del séptimo arte. La plataforma permite filtrar películas por título, año de lanzamiento y, para los amantes de géneros específicos, ofrece selecciones de categorías principales como Horror o Documentales, facilitando la búsqueda y adaptándose a los gustos del usuario.
 
-![Pelis]()
 
 ## 2. Resumen del proyecto
 
-En este proyecto, creé una página web destinada a visualizar, filtrar y ordenar el catálogo de películas de la API: TMDB (The Movie data base)
-Esta página puede servir como un catálogo de películas general, pero tambien tiene una funcion de busqueda para encontrar peliculas por nopmbre, una funciond e busqueda para encontar peliculas segun su anio de lanzamiento, para seleccionar peliculas populares de los generos favoritos de todos, y finalmente incluí una opción para visualizar las películas más populares en Japón, como un guiño al cine oriental y también al anime. 
+Desarrollé una página web que se aprovecha de la API TMDB (The Movie Database) para visualizar un amplio catálogo de películas. Si bien CINE DECK actúa como un directorio general de películas, su versatilidad destaca:
 
-Para implementar este proyecto elegí un framework (REACT)
-Al elegir un _framework_ o _librería_ para mi interfaz, nos apoyamos en una
-serie de convenciones e implementaciones _probadas_ y _documentadas_ para
-resolver un problema común a toda interfaz web:
-[_mantener la interfaz sincronizada con el estado_](https://medium.com/dailyjs/the-deepest-reason-why-modern-javascript-frameworks-exist-933b86ebc445).
-Esto nos permite concentrarnos mejor (dedicar más tiempo) en las
-características _específicas_ de nuestra aplicación.
+    Búsqueda por Título: Encuentra fácilmente esa película que llevas tiempo queriendo ver.
 
-Cuando elegimos una de estas tecnologías no solo importamos un pedacito de
-código para reusarlo (lo cuál es un gran valor per se), si no que adoptamos una
-**arquitectura**, una serie de **principios de diseño**, un **paradigma**, unas
-**abstracciones**, un **vocabulario**, una **comunidad**, etc...
+    Filtrado por Año: Viaja en el tiempo y descubre películas según su año de estreno.
 
-Como desarrolladora Front-end, estos kits de desarrollo pueden resultarte
-de gran ayuda para implementar rápidamente características de los proyectos en
-los que trabajes.
+    Géneros Populares: Sea cual sea tu preferencia, desde el suspense del horror hasta la verdad de los documentales, aquí encontrarás tu próxima película favorita.
+
+    Cine Oriental: Como tributo al impacto cultural del cine japonés y, por supuesto, al anime, he incorporado una sección que muestra las películas más populares de Japón.
+
+  
+
+¿Por qué elegí React?
+
+Al considerar diversas tecnologías para desarrollar Cinedeck, me decidí por React por las siguientes razones:
+
+1. Componentes Reutilizables
+React me permitió diseñar y construir componentes modulares y reutilizables. Esto significa que si muestro detalles o listados de películas en diferentes partes de la aplicación, puedo reutilizar un mismo componente, facilitando el desarrollo y mantenimiento.
+
+3. SPA (Single Page Application)
+Cinedeck está diseñado para ser una aplicación de una sola página, proporcionando una experiencia fluida a los usuarios. React es conocido por su eficiencia en la creación de SPAs, permitiéndome ofrecer una navegación rápida y sin recargas de página completas.
+
+3. Flexibilidad y Escalabilidad
+React tiene una arquitectura basada en componentes que me proporciona la flexibilidad de adaptar y escalar la aplicación según las necesidades. A medida que Cinedeck crece, puedo añadir, modificar o quitar funcionalidades con facilidad.
 
 ## 3. Objetivos de aprendizaje
 
