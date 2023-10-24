@@ -51,7 +51,7 @@ React tiene una arquitectura basada en componentes que me proporciona la flexibi
 
 
 Estos son los objetivos que he llegado a entender y aplicar en mi proyecto:
-Abvance del proyecto 
+- [x] **Avance del proyecto**
 ![](https://raw.githubusercontent.com/amalia345/DEV009-movie-challenge-fw-new/main/docs/Captura%20de%20pantalla%202023-10-20%20184119.png)
 
 ### HTML
