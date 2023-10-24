@@ -241,7 +241,7 @@ Aquí se muestran la primera iteración del prototipo de baja fidelidad
 ![](https://raw.githubusercontent.com/amalia345/DEV009-movie-challenge-fw-new/main/docs/movie-detail.png)
 
 ### Prototipo de Alta fidelidad
-![](https://raw.githubusercontent.com/amalia345/DEV009-movie-challenge-fw-new/main/docs/Captura%20de%20pantalla%202023-10-24%20094522.png)
+![](https://raw.githubusercontent.com/amalia345/DEV009-movie-challenge-fw-new/main/docs/Captura%20de%20pantalla%202023-10-24%20101519.png)
 ![](https://raw.githubusercontent.com/amalia345/DEV009-movie-challenge-fw-new/main/docs/Captura%20de%20pantalla%202023-10-24%20094535.png)
 
 ### Paleta de colores: 
