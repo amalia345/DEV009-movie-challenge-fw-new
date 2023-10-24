@@ -9,8 +9,7 @@
 - [5. Consideraciones técnicas](#5-consideraciones-técnicas)
 - [6. Criterios mínimos de aceptación del proyecto](#6-criterios-mínimos-de-aceptación-del-proyecto)
 - [7. Despliegue](#7-despliegue)
-- [8. Consideraciones para pedir tu Project Feedback](#8-consideraciones-para-pedir-tu-project-feedback)
-- [9. Pistas, tips y lecturas complementarias](#9-pistas-tips-y-lecturas-complementarias)
+
 
 ---
 
@@ -22,9 +21,8 @@ CINE DECK es una plataforma que sirve como un catálogo en la cual los usuarios 
 
 ## 2. Resumen del proyecto
 
-En este proyecto, creé una página web destinada a visualizar, filtrar y
-ordenar el catálogo de películas de la API:  (The Movie data base.)
-Esta página puede servir como un catálogo de películas general, pero también incluí una opción para visualizar las películas más populares en Japón, como un guiño al cine oriental y también al anime. 
+En este proyecto, creé una página web destinada a visualizar, filtrar y ordenar el catálogo de películas de la API: TMDB (The Movie data base)
+Esta página puede servir como un catálogo de películas general, pero tambien tiene una funcion de busqueda para encontrar peliculas por nopmbre, una funciond e busqueda para encontar peliculas segun su anio de lanzamiento, para seleccionar peliculas populares de los generos favoritos de todos, y finalmente incluí una opción para visualizar las películas más populares en Japón, como un guiño al cine oriental y también al anime. 
 
 Para implementar este proyecto elegí un framework (REACT)
 Al elegir un _framework_ o _librería_ para mi interfaz, nos apoyamos en una
@@ -50,7 +48,7 @@ Estos son los objetivos que he llegado a entender y aplicar en mi proyecto:
 
 ### HTML
 
-- [ ] **Uso de HTML semántico**
+- [x] **Uso de HTML semántico**
 
   <details><summary>Links</summary><p>
 
@@ -60,7 +58,7 @@ Estos son los objetivos que he llegado a entender y aplicar en mi proyecto:
 
 ### CSS
 
-- [ ] **Uso de selectores de CSS**
+- [x] **Uso de selectores de CSS**
 
   <details><summary>Links</summary><p>
 
@@ -68,7 +66,7 @@ Estos son los objetivos que he llegado a entender y aplicar en mi proyecto:
   * [CSS Selectors - MDN](https://developer.mozilla.org/es/docs/Web/CSS/CSS_Selectors)
 </p></details>
 
-- [ ] **Modelo de caja (box model): borde, margen, padding**
+- [x] **Modelo de caja (box model): borde, margen, padding**
 
   <details><summary>Links</summary><p>
 
@@ -79,7 +77,7 @@ Estos son los objetivos que he llegado a entender y aplicar en mi proyecto:
   * [display - CSS Tricks](https://css-tricks.com/almanac/properties/d/display/)
 </p></details>
 
-- [ ] **Uso de flexbox en CSS**
+- [x] **Uso de flexbox en CSS**
 
   <details><summary>Links</summary><p>
 
@@ -105,28 +103,28 @@ Estos son los objetivos que he llegado a entender y aplicar en mi proyecto:
 
 ### JavaScript
 
-- [ ] **Pruebas unitarias (unit tests)**
+- [x] **Pruebas unitarias (unit tests)**
 
   <details><summary>Links</summary><p>
 
   * [Empezando con Jest - Documentación oficial](https://jestjs.io/docs/es-ES/getting-started)
 </p></details>
 
-- [ ] **Pruebas asíncronas**
+- [x] **Pruebas asíncronas**
 
   <details><summary>Links</summary><p>
 
   * [Tests de código asincrónico con Jest - Documentación oficial](https://jestjs.io/docs/es-ES/asynchronous)
 </p></details>
 
-- [ ] **Uso de mocks y espías**
+- [x] **Uso de mocks y espías**
 
   <details><summary>Links</summary><p>
 
   * [Manual Mocks con Jest - Documentación oficial](https://jestjs.io/docs/es-ES/manual-mocks)
 </p></details>
 
-- [ ] **Módulos de ECMAScript (ES Modules)**
+- [x] **Módulos de ECMAScript (ES Modules)**
 
   <details><summary>Links</summary><p>
 
@@ -134,356 +132,105 @@ Estos son los objetivos que he llegado a entender y aplicar en mi proyecto:
   * [export - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/export)
 </p></details>
 
-- [ ] **Uso de linter (ESLINT)**
+- [x] **Uso de linter (ESLINT)**
 
-- [ ] **Uso de identificadores descriptivos (Nomenclatura y Semántica)**
+- [x] **Uso de identificadores descriptivos (Nomenclatura y Semántica)**
 
 ### Control de Versiones (Git y GitHub)
 
-- [ ] **Git: Instalación y configuración**
+- [x] **Git: Instalación y configuración**
 
-- [ ] **Git: Control de versiones con git (init, clone, add, commit, status, push, pull, remote)**
+- [x] **Git: Control de versiones con git (init, clone, add, commit, status, push, pull, remote)**
 
-- [ ] **Git: Integración de cambios entre ramas (branch, checkout, fetch, merge, reset, rebase, tag)**
+- [x] **Git: Integración de cambios entre ramas (branch, checkout, fetch, merge, reset, rebase, tag)**
 
-- [ ] **GitHub: Creación de cuenta y repos, configuración de llaves SSH**
+- [x] **GitHub: Creación de cuenta y repos, configuración de llaves SSH**
 
-- [ ] **GitHub: Despliegue con GitHub Pages**
+- [x] **Netlify: Despliegue con netlify**
 
-  <details><summary>Links</summary><p>
+- [x] **GitHub: Colaboración en Github (branches | forks | pull requests | code review | tags)**
 
-  * [Sitio oficial de GitHub Pages](https://pages.github.com/)
-</p></details>
-
-- [ ] **GitHub: Colaboración en Github (branches | forks | pull requests | code review | tags)**
-
-- [ ] **GitHub: Organización en Github (projects | issues | labels | milestones | releases)**
+- [x] **GitHub: Organización en Github (projects | issues | labels | milestones | releases)**
 
 ### HTTP
 
-- [ ] **Consulta o petición (request) y respuesta (response).**
-
-  <details><summary>Links</summary><p>
-
-  * [Generalidades del protocolo HTTP - MDN](https://developer.mozilla.org/es/docs/Web/HTTP/Overview)
-  * [Mensajes HTTP - MDN](https://developer.mozilla.org/es/docs/Web/HTTP/Messages)
-</p></details>
-
-- [ ] **Cabeceras (headers)**
-
-  <details><summary>Links</summary><p>
-
-  * [HTTP headers - MDN](https://developer.mozilla.org/es/docs/Web/HTTP/Headers)
-</p></details>
-
-- [ ] **Cuerpo (body)**
-
-  <details><summary>Links</summary><p>
-
-  * [Cuerpo de Mensajes HTTP - MDN](https://developer.mozilla.org/es/docs/Web/HTTP/Messages#cuerpo)
-</p></details>
-
-- [ ] **Verbos HTTP**
-
-  <details><summary>Links</summary><p>
-
-  * [Métodos de petición HTTP - MDN](https://developer.mozilla.org/es/docs/Web/HTTP/Methods)
-</p></details>
-
-- [ ] **Códigos de status de HTTP**
-
-  <details><summary>Links</summary><p>
-
-  * [Códigos de estado de respuesta HTTP - MDN](https://developer.mozilla.org/es/docs/Web/HTTP/Status)
-  * [The Complete Guide to Status Codes for Meaningful ReST APIs - dev.to](https://dev.to/khaosdoctor/the-complete-guide-to-status-codes-for-meaningful-rest-apis-1-5c5)
-</p></details>
-
+- [x] **Consulta o petición (request) y respuesta (response).**
+- [x] **Cabeceras (headers)**
+- [x] **Cuerpo (body)**
+- [x] **Verbos HTTP(GET)** 
+- [x] **Códigos de status de HTTP**
 - [ ] **Encodings y JSON**
-
-  <details><summary>Links</summary><p>
-
-  * [Introducción a JSON - Documentación oficial](https://www.json.org/json-es.html)
-</p></details>
-
-- [ ] **CORS (Cross-Origin Resource Sharing)**
-
-  <details><summary>Links</summary><p>
-
-  * [Control de acceso HTTP (CORS) - MDN](https://developer.mozilla.org/es/docs/Web/HTTP/CORS)
-</p></details>
 
 ### React
 
-- [ ] **JSX**
+- [x] **JSX**
 
   <details><summary>Links</summary><p>
 
   * [Presentando JSX - Documentación oficial](https://es.react.dev/learn/writing-markup-with-jsx)
 </p></details>
 
-- [ ] **Componentes y propiedades (props)**
+- [x] **Componentes y propiedades (props)**
 
   <details><summary>Links</summary><p>
 
   * [Componentes y propiedades - Documentación oficial](https://es.react.dev/learn/passing-props-to-a-component)
 </p></details>
 
-- [ ] **Manejo de eventos**
+- [x] **Manejo de eventos**
 
   <details><summary>Links</summary><p>
 
   * [Manejando eventos - Documentación oficial](https://es.react.dev/learn/responding-to-events)
 </p></details>
 
-- [ ] **Listas y keys**
+- [x] **Listas y keys**
 
   <details><summary>Links</summary><p>
 
   * [Listas y keys - Documentación oficial](https://es.react.dev/learn/rendering-lists)
 </p></details>
 
-- [ ] **Renderizado condicional**
+- [x] **Renderizado condicional**
 
   <details><summary>Links</summary><p>
 
   * [Renderizado condicional - Documentación oficial](https://es.react.dev/learn/conditional-rendering)
 </p></details>
 
-- [ ] **Elevación de estado**
+- [x] **Elevación de estado**
 
   <details><summary>Links</summary><p>
 
   * [Levantando el estado - Documentación oficial](https://es.react.dev/learn/sharing-state-between-components)
 </p></details>
 
-- [ ] **Hooks**
+- [x] **Hooks (USEffect)**
 
   <details><summary>Links</summary><p>
 
   * [Presentando Hooks - Documentación oficial](https://es.react.dev/reference/react)
 </p></details>
 
-- [ ] **CSS modules**
+- [x] **CSS modules**
 
   <details><summary>Links</summary><p>
 
   * [Adding a CSS Modules Stylesheet - Documentación de Create React App (en inglés)](https://vitejs.dev/guide/features.html#css-modules)
 </p></details>
 
-- [ ] **React Router**
 
-  <details><summary>Links</summary><p>
-
-  * [Quick Start - Documentación oficial (en inglés)](https://reactrouter.com/en/main/start/tutorial)
-</p></details>
-
-
-
-### typescript
-
-- [ ] **Chequeo estático de tipos**
-
-  <details><summary>Links</summary><p>
-
-  * [Documentación oficial de Typescript](https://www.typescriptlang.org/docs/handbook/2/basic-types.html#static-type-checking)
-</p></details>
-
-- [ ] **Rigurosidad**
-
-  <details><summary>Links</summary><p>
-
-  * [Documentación oficial de Typescript](https://www.typescriptlang.org/docs/handbook/2/basic-types.html#strictness)
-  * [Documentación oficial de Typescript](https://www.typescriptlang.org/tsconfig#Type_Checking_6248)
-</p></details>
-
-- [ ] **Tipos primitivos**
-
-  <details><summary>Links</summary><p>
-
-  * [Documentación oficial de Typescript](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#the-primitives-string-number-and-boolean)
-</p></details>
-
-- [ ] **Arreglos**
-
-  <details><summary>Links</summary><p>
-
-  * [Documentación oficial de Typescript](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#arrays)
-</p></details>
-
-- [ ] **Tipo `any`**
-
-  <details><summary>Links</summary><p>
-
-  * [Documentación oficial de Typescript](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#any)
-</p></details>
-
-- [ ] **Funciones**
-
-  <details><summary>Links</summary><p>
-
-  * [Documentación oficial de Typescript](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#functions)
-  * [Documentación oficial de Typescript](https://www.typescriptlang.org/docs/handbook/2/functions.html)
-</p></details>
-
-- [ ] **Propiedades opcionales**
-
-  <details><summary>Links</summary><p>
-
-  * [Documentación oficial de Typescript](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#optional-properties)
-</p></details>
-
-- [ ] **Tipos Union**
-
-  <details><summary>Links</summary><p>
-
-  * [Documentación oficial de Typescript](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#union-types)
-</p></details>
-
-- [ ] **Alias de tipos**
-
-  <details><summary>Links</summary><p>
-
-  * [Documentación oficial de Typescript](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#type-aliases)
-</p></details>
-
-- [ ] **Interfaces**
-
-  <details><summary>Links</summary><p>
-
-  * [Documentación oficial de Typescript](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#interfaces)
-</p></details>
-
-- [ ] **Type assertions**
-
-  <details><summary>Links</summary><p>
-
-  * [Documentación oficial de Typescript](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#type-assertions)
-</p></details>
-
-- [ ] **Tipos literales**
-
-  <details><summary>Links</summary><p>
-
-  * [Documentación oficial de Typescript](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#literal-types)
-</p></details>
-
-- [ ] **null y undefined**
-
-  <details><summary>Links</summary><p>
-
-  * [Documentación oficial de Typescript](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#null-and-undefined)
-</p></details>
-
-- [ ] **Enums**
-
-  <details><summary>Links</summary><p>
-
-  * [Documentación oficial de Typescript](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#enums)
-</p></details>
-
-- [ ] **Narrowing**
-
-  <details><summary>Links</summary><p>
-
-  * [Documentación oficial de Typescript](https://www.typescriptlang.org/docs/handbook/2/narrowing.html)
-</p></details>
-
-- [ ] **Campos**
-
-  <details><summary>Links</summary><p>
-
-  * [Documentación oficial de Typescript](https://www.typescriptlang.org/docs/handbook/2/classes.html#fields)
-</p></details>
-
-- [ ] **Constructors**
-
-  <details><summary>Links</summary><p>
-
-  * [Documentación oficial de Typescript](https://www.typescriptlang.org/docs/handbook/2/classes.html#constructors)
-</p></details>
-
-- [ ] **Métodos**
-
-  <details><summary>Links</summary><p>
-
-  * [Documentación oficial de Typescript](https://www.typescriptlang.org/docs/handbook/2/classes.html#methods)
-</p></details>
-
-- [ ] **Getters y Setters**
+- [x] **Getters y Setters**
 
   <details><summary>Links</summary><p>
 
   * [Documentación oficial de Typescript](https://www.typescriptlang.org/docs/handbook/2/classes.html#getters--setters)
-</p></details>
-
-- [ ] **implements Clausas**
-
-  <details><summary>Links</summary><p>
-
-  * [Documentación oficial de Typescript](https://www.typescriptlang.org/docs/handbook/2/classes.html#implements-clauses)
-</p></details>
-
-- [ ] **extends Clausas**
-
-  <details><summary>Links</summary><p>
-
-  * [Documentación oficial de Typescript](https://www.typescriptlang.org/docs/handbook/2/classes.html#extends-clauses)
-</p></details>
-
-- [ ] **public**
-
-  <details><summary>Links</summary><p>
-
-  * [Documentación oficial de Typescript](https://www.typescriptlang.org/docs/handbook/2/classes.html#public)
-</p></details>
-
-- [ ] **protected**
-
-  <details><summary>Links</summary><p>
-
-  * [Documentación oficial de Typescript](https://www.typescriptlang.org/docs/handbook/2/classes.html#protected)
-</p></details>
-
-- [ ] **private**
-
-  <details><summary>Links</summary><p>
-
-  * [Documentación oficial de Typescript](https://www.typescriptlang.org/docs/handbook/2/classes.html#private)
-</p></details>
-
-- [ ] **Miembros de clase estáticos**
-
-  <details><summary>Links</summary><p>
-
-  * [Documentación oficial de Typescript](https://www.typescriptlang.org/docs/handbook/2/classes.html#static-members)
-</p></details>
-
-- [ ] **this**
-
-  <details><summary>Links</summary><p>
-
-  * [Documentación oficial de Typescript](https://www.typescriptlang.org/docs/handbook/2/classes.html#this-at-runtime-in-classes)
-</p></details>
-
-- [ ] **Clases abstractas**
-
-  <details><summary>Links</summary><p>
-
-  * [Documentación oficial de Typescript](https://www.typescriptlang.org/docs/handbook/2/classes.html#abstract-classes-and-members)
-</p></details>
-
-- [ ] **Decoradores**
-
-  <details><summary>Links</summary><p>
-
-  * [Documentación oficial de Typescript](https://www.typescriptlang.org/docs/handbook/decorators.html)
-</p></details>
 
 ### Diseño de producto
 
 - [ ] **Crear prototipos de alta fidelidad que incluyan interacciones**
 
-- [ ] **Seguir los principios básicos de diseño visual**
+- [x] **Seguir los principios básicos de diseño visual**
 
 ## 4. Consideraciones generales
 
@@ -611,10 +358,6 @@ Puedes elegir el proveedor (o proveedores) que prefieras junto
 con el mecanismo de despligue y estrategia de alojamiento.
 Te recomendamos explorar las siguientes opciones:
 
-- [Vercel](https://vercel.com/) es una plataforma de _despliegue_ que
-nos permite desplegar nuestra aplicación web estática (HTML, CSS y
-JavaScript) y también nos permite desplegar aplicaciones web que se
-ejecutan en el servidor (Node.js).
 - [Netlify](https://www.netlify.com/) al igual que Vercel, es una
 plataforma de _despliegue_ que nos permite desplegar nuestra aplicación
 web estática (HTML, CSS y JavaScript) y también nos permite desplegar
@@ -625,77 +368,16 @@ aplicaciones web que se ejecutan en el servidor (Node.js).
 Antes de agendar tu Project Feedback con un coach, asegúrate que tu proyecto:
 
 - [ ] Protipo de alta fidelidad en Figma
-- [ ] Cumple con todos los [criterios mínimos de aceptación](#6-criterios-mínimos-de-aceptación-del-proyecto)
-- [ ] Está subido a GitHub
-- [ ] Esta [desplegado](#7-despliegue)
-- [ ] Tiene un README con la definición del producto.
-
-Recuerda que debes hacer una autoevaluación de objetivos de aprendizaje
-y life skills desde tu dashboard de estudiante.
-
-Si no has completado todo lo anterior, no consideramos que estás lista
-para tu sesión de Project Feedback.
+- [x] Cumple con todos los [criterios mínimos de aceptación](#6-criterios-mínimos-de-aceptación-del-proyecto)
+- [x] Está subido a GitHub
+- [x] Esta [desplegado](#7-despliegue)
+- [x] Tiene un README con la definición del producto.
 
 ### Prototipo de alta fidelidad
 
 Tomando como base el prototipo de baja fidelidad entregado, crea uno de alta
 fidelidad en Figma. Define una paleta de colores y un diseño grafico. Procura
 que esto te tome entre 1 o 2 días.
-
-### Explora y consume The Movie Database API
-
-Explora la
-[documentación](https://developer.themoviedb.org/docs)
-de The Movie Database API. Inicia leyendo la sección
-[_Getting Started_](https://developer.themoviedb.org/docs/getting-started),
-luego
-[_AUTHENTICATION_ --> _Application_](https://developer.themoviedb.org/docs/authentication-application)
-y finalmente las referencias de endpoints
-[/discover/movie](https://developer.themoviedb.org/reference/discover-movie)
-y
-[/movie/{movie_id}](https://developer.themoviedb.org/reference/movie-details).
-
-Luego crear una cuenta y genera una llave
-(key) de acceso para consumir la API.
-
-Finalmente, realiza peticiones HTTP de prueba a la API usando herramientas como
-[Postman](https://www.postman.com/)
-o
-[REST Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client).
-Identifica los headers, body, verbos, códigos de respuesta y encodings las peticiones.
-
-### Explora la documentacion del framework  elegido
-
-La comunidad de desarrolladoras de cada framework se ha forzado mucho por crear
-documentaciones amigables para quienes inician con cada tecnología. Por lo tanto,
-date la oportunidad de explorar la documentación y probar sus ejemplos y tutoriales.
-
-### Planifica la implementación de la primera historia de usuaria
-
-Toma la primera historia de usuaria y
-divídela en tareas más pequeñas. Identifica
-el orden y prioridad de cada tarea.
-Documenta tu planificacion en Trello o Github Project.
-
-### Implementa tu primer componente
-
-Toma la primera vista de prototipo de alta e implementala.
-Te sugerimos seguir los siguientes
-pasos independiente del framework  que uses:
-
-- Paso 1: Separa la UI en una jerarquía de componentes
-- Paso 2: Construye una versión estática de la UI sin añadir ninguna
-interactividad aún
-- Paso 3: Encuentra la representación mínima pero completa del estado de la UI.
-Piensa en el estado como el conjunto mínimo de datos cambiantes que
-la aplicación necesita recordar.
-- Paso 4: Después de identificar los datos mínimos de estado de tu aplicación,
-debes identificar qué componente es responsable de cambiar este estado,
-o posee el estado.
-- Paso 5: Identifica el flujo de comunicación entre cada componente:
-padre a hijo o hijo a padre. Implementa la estrategia identificada tal como
-te sugiere el framework.
-
 ### Frameworks / libraries
 
 - [React](https://react.dev/)
