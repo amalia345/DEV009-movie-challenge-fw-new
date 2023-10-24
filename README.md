@@ -45,6 +45,8 @@ Cinedeck está diseñado para ser una aplicación de una sola página, proporcio
 3. Flexibilidad y Escalabilidad
 React tiene una arquitectura basada en componentes que me proporciona la flexibilidad de adaptar y escalar la aplicación según las necesidades. A medida que Cinedeck crece, puedo añadir, modificar o quitar funcionalidades con facilidad.
 
+![PAgina termianda](https://raw.githubusercontent.com/amalia345/DEV009-movie-challenge-fw-new/main/docs/Captura%20de%20pantalla%202023-10-23%20144729.png)
+
 ## 3. Objetivos de aprendizaje
 
 
