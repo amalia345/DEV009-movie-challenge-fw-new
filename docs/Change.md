@@ -16,6 +16,8 @@ Se terminó test del componente menu
 Se terminó test del componeente Movies
 Se terminó test del componeente App
 Se terminó test del componeente Cards
+## <1.04> - <25-10-23 >
+Proyecto terminado
 
 ### Added
 
@@ -31,6 +33,8 @@ En esta sección detalla los cambios que hiciste a funcionalides ya existentes.
 Se concluyeron test de Componentes Menu,App, Cards y Movies
 Movi función findMovieByName() Busqueda por nombre a componente Menu
 Refactorización de todas las funciones, se sepraron los servicios de los componentes.
+
+Proyecto terminado
 
 
 ### Fixed
